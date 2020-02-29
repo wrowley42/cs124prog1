@@ -219,12 +219,14 @@ public class TestFile {
     if(args[0].equals("21")) {
       int[] trials = {128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144};
       for (int i = 0; i < 11 ; i++) {
+        double aver = 0.0;
         System.out.println("Starting trials for n = " + trials[i] + "\n");
         for (int j = 0; j < 5 ; j++ ) {
-          GeoGraphV4 Gio = new GeoGraphV4(trials[i], 2);
+          GeoGraphV4 Gio = new GeoGraphV4(trials[i], Integer.parseInt(args[1]));
           MstV4 mini = new MstV4(Gio.getEdges(), Gio.getN());
-          System.out.println("Trial " + j + " = " + mini.getAvg() + "\n");
+          aver = aver + mini.getAvg();
         }
+        System.out.println("Average for n = " + (aver / 5) + "\n");
       }
     }
    }
