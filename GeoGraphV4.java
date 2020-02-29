@@ -21,9 +21,7 @@ public class GeoGraphV4 {
     this.n = n;
     this.dim = dim;
     this.cutoff = generateCutoff(n, dim);
-    System.out.println("Generating GEO Vertices");
     this.vertices = generateVertices(n, dim);
-    System.out.println("Calculating GEO Edges");
     this.edges = new EdgeGraph(n);
     // edge instantiation
     generateEdges(this.vertices, n, dim, cutoff);

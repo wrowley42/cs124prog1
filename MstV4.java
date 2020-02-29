@@ -22,7 +22,6 @@ public class MstV4 {
   // class constructor
   public MstV4(EdgeGraph e, int n)
   {
-    System.out.println("Assigning MST Edges");
     Pair t = prims(e, n);
     this.edges = t.eg;
     this.n = n;
