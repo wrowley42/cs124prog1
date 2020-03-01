@@ -5,7 +5,7 @@ public class TestFile {
      // test for RandGraph (DONE)
     if(args[0].equals("1")) {
       RandGraph rand = new RandGraph(Integer.parseInt(args[1]));
-      System.out.println(rand);
+      rand.printEdges();
     }
     // testing the heap implementation (DONE)
     if (args[0].equals("2")) {
